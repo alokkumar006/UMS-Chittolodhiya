@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(255, 253, 208);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 10px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .filter-btns {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            margin: 0 10px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .filter-btn:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>School Gallery</h1>
+</header>
+
+<div class="container">
+<div class="filter-btns">
+    <div class="filter-btn" onclick="filterSelection('all')">Show All</div>
+    <div class="filter-btn" onclick="filterSelection('library')">Library</div>
+    <div class="filter-btn" onclick="filterSelection('buildings')">School Buildings</div>
+    <div class="filter-btn" onclick="filterSelection('Fln-room')">FLN Room</div>
+    <div class="filter-btn" onclick="filterSelection('Science-lab')">Science Lab</div>
+    <!-- Add more filter buttons for other categories -->
+</div>
+</div>
+
+<div class="gallery">
+    <!-- Buildings strats from here  -->
+
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/mainfront.jpg" alt="Buildings 1">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/mainfirst.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/mains.jpg" alt="Buildings 3">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/mainsecond.jpg" alt="Buildings 4">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/mainsideimg.jpg" alt="Buildings 5">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021122154.jpg" alt="Buildings 6">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021122703.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021122714.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021122749.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021122807.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021122923.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021122939.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021122958.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123015.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123111.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123122.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123122_01.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123134.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123145.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123159.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123219.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123315.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021123335.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021124032.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021124052.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021124936.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021125015.jpg" alt="Buildings 2">
+    </div>
+    <div class="gallery-item" data-category="buildings">
+      <img src="images/Schl_images/ambi/IMG20231021125428.jpg" alt="Buildings 2">
+    </div>
+
+    <div class="gallery-item" data-category="library">
+        <img src="images/Schl_images/lib/IMG20231021123409.jpg" alt="Library Image 1">
+    </div>
+    <div class="gallery-item" data-category="library">
+        <img src="images/Schl_images/lib/IMG20231021123426.jpg" alt="Library Image 2">
+    </div>
+    <div class="gallery-item" data-category="library">
+      <img src="images/Schl_images/lib/IMG20231021123432.jpg" alt="Library Image 3">
+    </div>
+    <div class="gallery-item" data-category="library">
+      <img src="images/Schl_images/lib/IMG20231021123443.jpg" alt="Library Image 4">
+    </div>
+    <div class="gallery-item" data-category="library">
+      <img src="images/Schl_images/lib/IMG20231021123504.jpg" alt="Library Image 5">
+    </div>
+    <div class="gallery-item" data-category="library">
+      <img src="images/Schl_images/lib/IMG20231021123514.jpg" alt="Library Image 6">
+    </div>
+    <div class="gallery-item" data-category="library">
+      <img src="images/Schl_images/lib/IMG20231021123528.jpg" alt="Library Image 7">
+    </div>
+    <div class="gallery-item" data-category="library">
+      <img src="images/Schl_images/lib/IMG20231021123545.jpg" alt="Library Image 8">
+    </div>
+    <!-- Add more items for the library category -->
+
+    <!-- fln room from here -->
+    <div class="gallery-item" data-category="Fln-room">
+      <img src="images/Schl_images/fln_room/IMG20231021122234.jpg" alt="FLN room 1">
+    </div>
+    <div class="gallery-item" data-category="Fln-room">
+      <img src="images/Schl_images/fln_room/IMG20231021122257.jpg" alt="FLN room 2">
+    </div>
+    <div class="gallery-item" data-category="Fln-room">
+      <img src="images/Schl_images/fln_room/IMG20231021122313.jpg" alt="FLN room 3">
+    </div>
+    <div class="gallery-item" data-category="Fln-room">
+      <img src="images/Schl_images/fln_room/IMG20231021122335.jpg" alt="FLN room 4">
+    </div>
+    <div class="gallery-item" data-category="Fln-room">
+      <img src="images/Schl_images/fln_room/IMG20231021122342.jpg" alt="FLN room 5">
+    </div>
+    <div class="gallery-item" data-category="Fln-room">
+      <img src="images/Schl_images/fln_room/IMG20231021122351.jpg" alt="FLN room 6">
+    </div>
+    <div class="gallery-item" data-category="Fln-room">
+      <img src="images/Schl_images/fln_room/IMG20231021122409.jpg" alt="FLN room 7">
+    </div>
+    <div class="gallery-item" data-category="Fln-room">
+      <img src="images/Schl_images/fln_room/IMG20231021122443.jpg" alt="FLN room 8">
+    </div>
+    <div class="gallery-item" data-category="Fln-room">
+      <img src="images/Schl_images/fln_room/IMG20231021122637.jpg" alt="FLN room 9">
+    </div>
+
+    <!-- Science lab from here -->
+    <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123614.jpg" alt="Science-lab 1">
+    </div>
+    <!-- <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123620.jpg" alt="Science-lab 2">
+    </div> -->
+    <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123630.jpg" alt="Science-lab 3">
+    </div>
+    <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123640.jpg" alt="Science-lab 4">
+    </div>
+    <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123651.jpg" alt="Science-lab 5">
+    </div>
+    <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123701.jpg" alt="Science-lab 6">
+    </div>
+    <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123724.jpg" alt="Science-lab 7">
+    </div>
+    <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123751.jpg" alt="Science-lab 8">
+    </div>
+    <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123801.jpg" alt="Science-lab 9">
+    </div>
+    <div class="gallery-item" data-category="Science-lab">
+      <img src="images/Schl_images/sci_lab/IMG20231021123823.jpg" alt="Science-lab 10">
+    </div>
+
+    <!-- Add more items for other categories -->
+
+</div>
+
+<footer class="footer-03">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li id="liststyle"><a href="#" class="py-1 d-block">Home</a></li>
+              <li><a href="#" class="py-1 d-block">Library</a></li>
+              <li><a href="#" class="py-1 d-block">FLN Room</a></li>
+              <li><a href="#" class="py-1 d-block">Computer Lab</a></li>
+              <li><a href="#" class="py-1 d-block">SmartClass</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h4>Follow Us</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-1 d-block">Facebook</a></li>
+              <li><a href="#" class="py-1 d-block">Instagram</a></li>
+              <li><a href="#" class="py-1 d-block">Youtube</a></li>
+              <li><a href="#" class="py-1 d-block">Twitter</a></li>
+              <li><a href="#" class="py-1 d-block">Whatsapp</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h4>Contact Us</h4>
+            <ul class="list-unstyled">
+              <li> UMS Chittolodhiya <br> Deoghar, Jharkhand</li>
+              <li>email: umschittolodhiya900@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row justify-content-end">
+          <div class="col-md-12 col-lg-11 mb-md-0 mb-4">
+            <h4 class="footer-heading">Our Current Location</h4>
+            <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.5880111869633!2d86.68164511491878!3d24.465075184241996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f13d959d48a2e3%3A0xa134977a6928b1e5!2sMiddle%20School%20Chittolodhiya!5e0!3m2!1sen!2sin!4v1668515261860!5m2!1sen!2sin"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 pt-4 border-top">
+      <div class="col-md-6 col-lg-8">
+
+        <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Ums Chittolodhiya <i class="ion-ios-heart" aria-hidden="true">
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+    function filterSelection(category) {
+        const items = document.querySelectorAll('.gallery-item');
+        items.forEach(item => {
+            const categories = item.getAttribute('data-category').split(' ');
+            if (category === 'all' || categories.includes(category)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
+</body>
+</html>
