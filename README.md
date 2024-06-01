@@ -1,2 +1,2 @@
 # UMS-Chittolodhiya
-Ums Chittolodhiya a government school website.
+Ums Chittolodhiya Deoghar School website is a Full stack responsive website for a government school present in Deoghar, Jharkhand. It is made using HTML, CSS and Javascript in the frontend and nodejs, express in the backend, for database i have used mongodb. It has many features such as School gallery, Admission form, About School, Principal's messag, etc. It is a responsive website which make it suitable for every devices. The website is multilingual as it have google transalte api integrated in it.
