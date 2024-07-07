@@ -4,10 +4,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Faculty Members</title>
+  <title>Ums Chittolodhiya - Faculty Members</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="style/style.css">
+  <style>
+    .faculty-card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .faculty-card img {
+      border-bottom: 5px solid #007bff;
+    }
+
+    .faculty-card .card-body {
+      text-align: center;
+    }
+
+    .faculty-card h5 {
+      color: #007bff;
+      margin-top: 10px;
+    }
+
+    .faculty-card p {
+      margin: 0;
+      color: #333;
+    }
+
+    .faculty-card .text-muted {
+      margin-top: 5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -27,26 +61,23 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Admission</a>
+              <a class="nav-link" href="admission.html">Admission</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Activities</a>
-            </li> -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Facilities
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="library.html">Library</a></li>
+                <li><a class="dropdown-item" href="#">Library</a></li>
                 <li><a class="dropdown-item" href="#">Computer Lab</a></li>
-                <li><a class="dropdown-item" href="flnroom.html">FLN Room</a></li>
+                <li><a class="dropdown-item" href="#">FLN Room</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -59,58 +90,71 @@
     <!-- Nav bar ended -->
   </header>
   <main>
-    <h3 class="text-center">Faculty Members</h3>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="container mt-4">
+      <h1 class="text-center mb-4">Our Faculty Members</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card">
-            <img src="/images/Schl_images/faculty/Ashokimg.jpeg" class="card-img-top" alt="...">
+          <div class="card faculty-card">
+            <img src="images/faculty1.jpg" class="card-img-top" alt="Faculty Member 1">
             <div class="card-body">
               <h5 class="card-title">Ashok Kumar</h5>
-              <p class="card-text">Subject: All <br>Date of joining: <br>Educational Qualification: MA <br>Mobno: 9431950771</p>
+              <p class="card-text">All Subject Teacher</p>
+              <p class="card-text"><small class="text-muted">Joined: </small></p>
+              <p class="card-text">Educational Qualification: MA</p>
+              <p class="card-text">Mobno: 9431950771</p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card">
-            <img src="/images/Schl_images/faculty/Rabindarimg.jpeg" class="card-img-top" alt="..." width="50px">
+          <div class="card faculty-card">
+            <img src="images/faculty2.jpg" class="card-img-top" alt="Faculty Member 2">
             <div class="card-body">
               <h5 class="card-title">Rabindar Parmanik</h5>
-              <p class="card-text">Subject: All <br>Date of joining: 16-11-2003<br>Educational Qualification: <br>Mobno: 9431949742
-              </p>
+              <p class="card-text">All Subject Teacher</p>
+              <p class="card-text"><small class="text-muted">Joined: 16th November 2003</small></p>
+              <p class="card-text">Educational Qualification: </p>
+              <p class="card-text">Mobno: 9431949742</p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card">
-            <img src="/images/Schl_images/faculty/Amitimg.jpeg" class="card-img-top" alt="...">
+          <div class="card faculty-card">
+            <img src="images/faculty3.jpg" class="card-img-top" alt="Faculty Member 3">
             <div class="card-body">
               <h5 class="card-title">Amit Kumar Thakur</h5>
-              <p class="card-text">Subject: All <br>Date of joining: 04-02-2014<br>Educational Qualification: BA<br>Mobno: 7654245478
-              </p>
+              <p class="card-text">All Subject Teacher</p>
+              <p class="card-text"><small class="text-muted">Joined: 4th Feb 2014</small></p>
+              <p class="card-text">Educational Qualification: BA</p>
+              <p class="card-text">Mobno: 7654245478</p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card">
-            <img src="/images/Schl_images/faculty/dashrathimg.jpeg" class="card-img-top" alt="...">
+          <div class="card faculty-card">
+            <img src="images/faculty4.jpg" class="card-img-top" alt="Faculty Member 4">
             <div class="card-body">
               <h5 class="card-title">Dashrath Rajak</h5>
-              <p class="card-text">Subject: All <br>Date of joining: 17-12-2003<br>Educational Qualification: BA<br>Mobno: 9471912229
-              </p>
+              <p class="card-text">All Subject Teacher</p>
+              <p class="card-text"><small class="text-muted">Joined: 17th December 2003</small></p>
+              <p class="card-text">Educational Qualification: BA</p>
+              <p class="card-text">Mobno: 9471912229</p>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card">
-            <img src="/images/Schl_images/faculty/rajeshimg.jpeg" class="card-img-top" alt="...">
+          <div class="card faculty-card">
+            <img src="images/faculty5.jpg" class="card-img-top" alt="Faculty Member 5">
             <div class="card-body">
               <h5 class="card-title">Rajesh Kumar Das</h5>
-              <p class="card-text">Subject: All <br>Date of joining: 14-04-2004<br>Educational Qualification: BA<br>Mobno: 8873225425
-              </p>
+              <p class="card-text">All Subject Teacher</p>
+              <p class="card-text"><small class="text-muted">Joined: February 2020</small></p>
+              <p class="card-text">Educational Qualification: BA</p>
+              <p class="card-text">Mobno: 8873225425</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </main>
   <!-- Footer start  -->
   <footer class="footer-03">
@@ -173,15 +217,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!-- footer ended  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous">
-  </script>
+    crossorigin="anonymous"></script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
-     function googleTranslateElementInit(){
-      new google.translate.TranslateElement(
-        {pageLanguage: 'en'},
-        'google_translate_element'
-      );
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en'
+      }, 'google_translate_element');
     }
   </script>
 </body>
